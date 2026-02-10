@@ -1,0 +1,1350 @@
+2026-02-08T01:57:29 | INFO     | main             | ============================================================
+2026-02-08T01:57:29 | INFO     | main             |   Kalshi BTC 15-Min Trading Bot Starting
+2026-02-08T01:57:29 | INFO     | main             |   Mode: DRY RUN
+2026-02-08T01:57:29 | INFO     | main             |   Base URL: https://api.elections.kalshi.com/trade-api/v2
+2026-02-08T01:57:29 | INFO     | main             |   Series: KXBTC15M
+2026-02-08T01:57:29 | INFO     | main             | ============================================================
+2026-02-08T01:57:29 | INFO     | storage          | Storage initialized at kalshi_bot.db
+2026-02-08T01:57:29 | INFO     | kalshi_client    | KalshiClient started (base_url=https://api.elections.kalshi.com/trade-api/v2)
+2026-02-08T01:57:29 | INFO     | price_feed       | PriceFeedAggregator started with 3 feeds: ['coinbase', 'binance', 'kraken']
+2026-02-08T01:57:30 | INFO     | main             | Account balance: 0¢ ($0.00) | Portfolio: 0¢ ($0.00)
+2026-02-08T01:57:30 | WARNING  | price_feed       | Insufficient price feeds: 0 active (need 1). Stale: ['coinbase', 'binance', 'kraken']
+2026-02-08T01:57:30 | WARNING  | main             | No BTC price available, waiting for feeds...
+2026-02-08T01:57:30 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T01:57:31 | INFO     | price_feed       | [coinbase] Subscribed to BTC-USD trades
+2026-02-08T01:57:32 | INFO     | price_feed       | [kraken] Subscribed to BTC/USD trades
+2026-02-08T01:57:32 | INFO     | execution        | [DRY_RUN] ORDER: buy yes 5@0¢ on KXBTC15M-26FEB080400-00 (edge=0.500, model_p=0.500)
+2026-02-08T01:57:35 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080400-00
+2026-02-08T01:57:36 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T01:57:38 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080400-00
+2026-02-08T01:57:40 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080400-00
+2026-02-08T01:57:42 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080400-00
+2026-02-08T01:57:42 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T01:57:44 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080400-00
+2026-02-08T01:57:46 | ERROR    | main             | Unexpected error in main loop: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 177, in _process_market
+    orderbook = await self.client.get_orderbook(market.ticker)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 337, in get_orderbook
+    for level in ob.get("no", [])
+                 ~~~~~~^^^^^^^^^^
+TypeError: 'NoneType' object is not iterable
+2026-02-08T01:57:48 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T01:57:52 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080400-00
+2026-02-08T01:57:54 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T01:57:55 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080400-00
+2026-02-08T01:57:57 | ERROR    | main             | Unexpected error in main loop: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 177, in _process_market
+    orderbook = await self.client.get_orderbook(market.ticker)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 337, in get_orderbook
+    for level in ob.get("no", [])
+                 ~~~~~~^^^^^^^^^^
+TypeError: 'NoneType' object is not iterable
+2026-02-08T01:58:00 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T01:58:03 | ERROR    | main             | Unexpected error in main loop: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 177, in _process_market
+    orderbook = await self.client.get_orderbook(market.ticker)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 337, in get_orderbook
+    for level in ob.get("no", [])
+                 ~~~~~~^^^^^^^^^^
+TypeError: 'NoneType' object is not iterable
+2026-02-08T01:58:06 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T01:58:09 | ERROR    | main             | Unexpected error in main loop: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 177, in _process_market
+    orderbook = await self.client.get_orderbook(market.ticker)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 337, in get_orderbook
+    for level in ob.get("no", [])
+                 ~~~~~~^^^^^^^^^^
+TypeError: 'NoneType' object is not iterable
+2026-02-08T01:58:11 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T01:58:15 | ERROR    | main             | Unexpected error in main loop: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 177, in _process_market
+    orderbook = await self.client.get_orderbook(market.ticker)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 337, in get_orderbook
+    for level in ob.get("no", [])
+                 ~~~~~~^^^^^^^^^^
+TypeError: 'NoneType' object is not iterable
+2026-02-08T01:58:17 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T01:58:19 | INFO     | main             | Bot shutdown requested
+2026-02-08T01:58:19 | INFO     | main             | Shutting down...
+2026-02-08T01:58:19 | INFO     | price_feed       | PriceFeedAggregator stopped
+2026-02-08T01:58:19 | INFO     | kalshi_client    | KalshiClient closed
+2026-02-08T01:58:19 | INFO     | main             | Shutdown complete
+2026-02-08T02:07:56 | INFO     | main             | ============================================================
+2026-02-08T02:07:56 | INFO     | main             |   Kalshi BTC 15-Min Trading Bot Starting
+2026-02-08T02:07:56 | INFO     | main             |   Mode: DRY RUN
+2026-02-08T02:07:56 | INFO     | main             |   Base URL: https://api.elections.kalshi.com/trade-api/v2
+2026-02-08T02:07:56 | INFO     | main             |   Series: KXBTC15M
+2026-02-08T02:07:56 | INFO     | main             | ============================================================
+2026-02-08T02:07:56 | INFO     | storage          | Storage initialized at kalshi_bot.db
+2026-02-08T02:07:56 | INFO     | kalshi_client    | KalshiClient started (base_url=https://api.elections.kalshi.com/trade-api/v2)
+2026-02-08T02:07:56 | INFO     | price_feed       | PriceFeedAggregator started with 3 feeds: ['coinbase', 'binance', 'kraken']
+2026-02-08T02:07:56 | INFO     | main             | Account balance: 0¢ ($0.00) | Portfolio: 0¢ ($0.00)
+2026-02-08T02:07:56 | WARNING  | price_feed       | Insufficient price feeds: 0 active (need 1). Stale: ['coinbase', 'binance', 'kraken']
+2026-02-08T02:07:56 | WARNING  | main             | No BTC price available, waiting for feeds...
+2026-02-08T02:07:56 | INFO     | price_feed       | [kraken] Subscribed to BTC/USD trades
+2026-02-08T02:07:56 | INFO     | price_feed       | [coinbase] Subscribed to BTC-USD trades
+2026-02-08T02:07:56 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:07:58 | INFO     | execution        | [DRY_RUN] ORDER: buy yes 5@0¢ on KXBTC15M-26FEB080415-15 (edge=0.500, model_p=0.500)
+2026-02-08T02:08:00 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:02 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:08:03 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:05 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:08 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:09 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:08:10 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:12 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:14 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:15 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:08:16 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:18 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:20 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:08:21 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:23 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:25 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:26 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:08:27 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:29 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:31 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:32 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:08:34 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:36 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:38 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:08:38 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:40 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:42 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:43 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:08:44 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:46 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:48 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:49 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:08:51 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:53 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:55 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:08:55 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:57 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:59 | INFO     | execution        | Skipping duplicate order: already have active buy yes resting on KXBTC15M-26FEB080415-15
+2026-02-08T02:08:59 | INFO     | main             | STATUS | BTC=$70517.10 (2 sources) | Markets=1 | Orders: 1 active, 0 filled | PnL=0¢ | Kill=False
+2026-02-08T02:09:00 | INFO     | main             | Bot shutdown requested
+2026-02-08T02:09:00 | INFO     | main             | Shutting down...
+2026-02-08T02:09:00 | INFO     | price_feed       | PriceFeedAggregator stopped
+2026-02-08T02:09:00 | INFO     | kalshi_client    | KalshiClient closed
+2026-02-08T02:09:00 | INFO     | main             | Shutdown complete
+2026-02-08T02:17:17 | INFO     | main             | ============================================================
+2026-02-08T02:17:17 | INFO     | main             |   Kalshi BTC 15-Min Trading Bot Starting
+2026-02-08T02:17:17 | INFO     | main             |   Mode: LIVE TRADING
+2026-02-08T02:17:17 | INFO     | main             |   Base URL: https://api.elections.kalshi.com/trade-api/v2
+2026-02-08T02:17:17 | INFO     | main             |   Series: KXBTC15M
+2026-02-08T02:17:17 | INFO     | main             | ============================================================
+2026-02-08T02:17:17 | INFO     | storage          | Storage initialized at kalshi_bot.db
+2026-02-08T02:17:17 | INFO     | kalshi_client    | KalshiClient started (base_url=https://api.elections.kalshi.com/trade-api/v2)
+2026-02-08T02:17:17 | INFO     | price_feed       | PriceFeedAggregator started with 3 feeds: ['coinbase', 'binance', 'kraken']
+2026-02-08T02:17:18 | INFO     | main             | Account balance: 0¢ ($0.00) | Portfolio: 0¢ ($0.00)
+2026-02-08T02:17:18 | WARNING  | price_feed       | Insufficient price feeds: 0 active (need 1). Stale: ['coinbase', 'binance', 'kraken']
+2026-02-08T02:17:18 | WARNING  | main             | No BTC price available, waiting for feeds...
+2026-02-08T02:17:18 | INFO     | price_feed       | [coinbase] Subscribed to BTC-USD trades
+2026-02-08T02:17:18 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:17:19 | INFO     | price_feed       | [kraken] Subscribed to BTC/USD trades
+2026-02-08T02:17:20 | ERROR    | main             | Unexpected error in main loop: yes_price must be 1–99, got 0
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 234, in _process_market
+    managed = await self.execution.execute_decision(decision)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\execution.py", line 121, in execute_decision
+    order = await self._client.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 387, in create_order
+    raise ValueError(f"yes_price must be 1–99, got {yes_price}")
+ValueError: yes_price must be 1–99, got 0
+2026-02-08T02:17:24 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:17:27 | ERROR    | main             | Unexpected error in main loop: yes_price must be 1–99, got 0
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 234, in _process_market
+    managed = await self.execution.execute_decision(decision)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\execution.py", line 121, in execute_decision
+    order = await self._client.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 387, in create_order
+    raise ValueError(f"yes_price must be 1–99, got {yes_price}")
+ValueError: yes_price must be 1–99, got 0
+2026-02-08T02:17:30 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:17:33 | ERROR    | main             | Unexpected error in main loop: yes_price must be 1–99, got 0
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 234, in _process_market
+    managed = await self.execution.execute_decision(decision)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\execution.py", line 121, in execute_decision
+    order = await self._client.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 387, in create_order
+    raise ValueError(f"yes_price must be 1–99, got {yes_price}")
+ValueError: yes_price must be 1–99, got 0
+2026-02-08T02:17:36 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:17:39 | ERROR    | main             | Unexpected error in main loop: yes_price must be 1–99, got 0
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 234, in _process_market
+    managed = await self.execution.execute_decision(decision)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\execution.py", line 121, in execute_decision
+    order = await self._client.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 387, in create_order
+    raise ValueError(f"yes_price must be 1–99, got {yes_price}")
+ValueError: yes_price must be 1–99, got 0
+2026-02-08T02:17:41 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:17:46 | ERROR    | main             | Unexpected error in main loop: yes_price must be 1–99, got 0
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 234, in _process_market
+    managed = await self.execution.execute_decision(decision)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\execution.py", line 121, in execute_decision
+    order = await self._client.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 387, in create_order
+    raise ValueError(f"yes_price must be 1–99, got {yes_price}")
+ValueError: yes_price must be 1–99, got 0
+2026-02-08T02:17:47 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:17:52 | ERROR    | main             | Unexpected error in main loop: yes_price must be 1–99, got 0
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 234, in _process_market
+    managed = await self.execution.execute_decision(decision)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\execution.py", line 121, in execute_decision
+    order = await self._client.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 387, in create_order
+    raise ValueError(f"yes_price must be 1–99, got {yes_price}")
+ValueError: yes_price must be 1–99, got 0
+2026-02-08T02:17:53 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:17:58 | ERROR    | main             | Unexpected error in main loop: yes_price must be 1–99, got 0
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 234, in _process_market
+    managed = await self.execution.execute_decision(decision)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\execution.py", line 121, in execute_decision
+    order = await self._client.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 387, in create_order
+    raise ValueError(f"yes_price must be 1–99, got {yes_price}")
+ValueError: yes_price must be 1–99, got 0
+2026-02-08T02:17:59 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:18:04 | ERROR    | main             | Unexpected error in main loop: yes_price must be 1–99, got 0
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 234, in _process_market
+    managed = await self.execution.execute_decision(decision)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\execution.py", line 121, in execute_decision
+    order = await self._client.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 387, in create_order
+    raise ValueError(f"yes_price must be 1–99, got {yes_price}")
+ValueError: yes_price must be 1–99, got 0
+2026-02-08T02:18:04 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:18:10 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:18:10 | ERROR    | main             | Unexpected error in main loop: yes_price must be 1–99, got 0
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 234, in _process_market
+    managed = await self.execution.execute_decision(decision)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\execution.py", line 121, in execute_decision
+    order = await self._client.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 387, in create_order
+    raise ValueError(f"yes_price must be 1–99, got {yes_price}")
+ValueError: yes_price must be 1–99, got 0
+2026-02-08T02:18:11 | INFO     | main             | Bot shutdown requested
+2026-02-08T02:18:11 | INFO     | main             | Shutting down...
+2026-02-08T02:18:11 | INFO     | price_feed       | PriceFeedAggregator stopped
+2026-02-08T02:18:11 | INFO     | kalshi_client    | KalshiClient closed
+2026-02-08T02:18:11 | INFO     | main             | Shutdown complete
+2026-02-08T02:26:43 | INFO     | main             | ============================================================
+2026-02-08T02:26:43 | INFO     | main             |   Kalshi BTC 15-Min Trading Bot Starting
+2026-02-08T02:26:43 | INFO     | main             |   Mode: LIVE TRADING
+2026-02-08T02:26:43 | INFO     | main             |   Base URL: https://api.elections.kalshi.com/trade-api/v2
+2026-02-08T02:26:43 | INFO     | main             |   Series: KXBTC15M
+2026-02-08T02:26:43 | INFO     | main             | ============================================================
+2026-02-08T02:26:43 | INFO     | storage          | Storage initialized at kalshi_bot.db
+2026-02-08T02:26:43 | INFO     | kalshi_client    | KalshiClient started (base_url=https://api.elections.kalshi.com/trade-api/v2)
+2026-02-08T02:26:43 | INFO     | price_feed       | PriceFeedAggregator started with 3 feeds: ['coinbase', 'binance', 'kraken']
+2026-02-08T02:26:44 | INFO     | main             | Account balance: 0¢ ($0.00) | Portfolio: 0¢ ($0.00)
+2026-02-08T02:26:44 | WARNING  | price_feed       | Insufficient price feeds: 0 active (need 1). Stale: ['coinbase', 'binance', 'kraken']
+2026-02-08T02:26:44 | WARNING  | main             | No BTC price available, waiting for feeds...
+2026-02-08T02:26:44 | INFO     | price_feed       | [coinbase] Subscribed to BTC-USD trades
+2026-02-08T02:26:44 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:26:45 | INFO     | price_feed       | [kraken] Subscribed to BTC/USD trades
+2026-02-08T02:26:46 | ERROR    | main             | Unexpected error in main loop: yes_price must be 1–99, got 0
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 234, in _process_market
+    managed = await self.execution.execute_decision(decision)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\execution.py", line 121, in execute_decision
+    order = await self._client.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 387, in create_order
+    raise ValueError(f"yes_price must be 1–99, got {yes_price}")
+ValueError: yes_price must be 1–99, got 0
+2026-02-08T02:26:50 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:26:52 | ERROR    | main             | Unexpected error in main loop: yes_price must be 1–99, got 0
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 234, in _process_market
+    managed = await self.execution.execute_decision(decision)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\execution.py", line 121, in execute_decision
+    order = await self._client.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 387, in create_order
+    raise ValueError(f"yes_price must be 1–99, got {yes_price}")
+ValueError: yes_price must be 1–99, got 0
+2026-02-08T02:26:56 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:26:58 | ERROR    | main             | Unexpected error in main loop: yes_price must be 1–99, got 0
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 234, in _process_market
+    managed = await self.execution.execute_decision(decision)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\execution.py", line 121, in execute_decision
+    order = await self._client.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 387, in create_order
+    raise ValueError(f"yes_price must be 1–99, got {yes_price}")
+ValueError: yes_price must be 1–99, got 0
+2026-02-08T02:27:02 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T02:27:04 | INFO     | main             | Bot shutdown requested
+2026-02-08T02:27:04 | INFO     | main             | Shutting down...
+2026-02-08T02:27:04 | INFO     | price_feed       | PriceFeedAggregator stopped
+2026-02-08T02:27:04 | INFO     | kalshi_client    | KalshiClient closed
+2026-02-08T02:27:04 | INFO     | main             | Shutdown complete
+2026-02-08T14:25:01 | INFO     | main             | ============================================================
+2026-02-08T14:25:01 | INFO     | main             |   Kalshi BTC 15-Min Trading Bot Starting
+2026-02-08T14:25:01 | INFO     | main             |   Mode: LIVE TRADING
+2026-02-08T14:25:01 | INFO     | main             |   Base URL: https://api.elections.kalshi.com/trade-api/v2
+2026-02-08T14:25:01 | INFO     | main             |   Series: KXBTC15M
+2026-02-08T14:25:01 | INFO     | main             | ============================================================
+2026-02-08T14:25:01 | INFO     | storage          | Storage initialized at kalshi_bot.db
+2026-02-08T14:25:01 | INFO     | kalshi_client    | KalshiClient started (base_url=https://api.elections.kalshi.com/trade-api/v2)
+2026-02-08T14:25:01 | INFO     | price_feed       | PriceFeedAggregator started with 3 feeds: ['coinbase', 'binance', 'kraken']
+2026-02-08T14:25:01 | INFO     | main             | Account balance: 0¢ ($0.00) | Portfolio: 0¢ ($0.00)
+2026-02-08T14:25:01 | WARNING  | price_feed       | Insufficient price feeds: 0 active (need 1). Stale: ['coinbase', 'binance', 'kraken']
+2026-02-08T14:25:01 | WARNING  | main             | No BTC price available, waiting for feeds...
+2026-02-08T14:25:01 | INFO     | price_feed       | [coinbase] Subscribed to BTC-USD trades
+2026-02-08T14:25:02 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T14:25:03 | INFO     | price_feed       | [kraken] Subscribed to BTC/USD trades
+2026-02-08T14:25:03 | ERROR    | main             | Unexpected error in main loop: yes_price must be 1–99, got 0
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 234, in _process_market
+    managed = await self.execution.execute_decision(decision)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\execution.py", line 121, in execute_decision
+    order = await self._client.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 387, in create_order
+    raise ValueError(f"yes_price must be 1–99, got {yes_price}")
+ValueError: yes_price must be 1–99, got 0
+2026-02-08T14:25:07 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T14:25:10 | ERROR    | main             | Unexpected error in main loop: yes_price must be 1–99, got 0
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 234, in _process_market
+    managed = await self.execution.execute_decision(decision)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\execution.py", line 121, in execute_decision
+    order = await self._client.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 387, in create_order
+    raise ValueError(f"yes_price must be 1–99, got {yes_price}")
+ValueError: yes_price must be 1–99, got 0
+2026-02-08T14:25:14 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T14:25:16 | ERROR    | main             | Unexpected error in main loop: yes_price must be 1–99, got 0
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 234, in _process_market
+    managed = await self.execution.execute_decision(decision)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\execution.py", line 121, in execute_decision
+    order = await self._client.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 387, in create_order
+    raise ValueError(f"yes_price must be 1–99, got {yes_price}")
+ValueError: yes_price must be 1–99, got 0
+2026-02-08T14:25:19 | INFO     | main             | Bot shutdown requested
+2026-02-08T14:25:19 | INFO     | main             | Shutting down...
+2026-02-08T14:25:19 | INFO     | price_feed       | PriceFeedAggregator stopped
+2026-02-08T14:25:19 | INFO     | kalshi_client    | KalshiClient closed
+2026-02-08T14:25:19 | INFO     | main             | Shutdown complete
+2026-02-08T14:36:23 | INFO     | main             | ============================================================
+2026-02-08T14:36:23 | INFO     | main             |   Kalshi BTC 15-Min Trading Bot Starting
+2026-02-08T14:36:23 | INFO     | main             |   Mode: LIVE TRADING
+2026-02-08T14:36:23 | INFO     | main             |   Base URL: https://api.elections.kalshi.com/trade-api/v2
+2026-02-08T14:36:23 | INFO     | main             |   Series: KXBTC15M
+2026-02-08T14:36:23 | INFO     | main             | ============================================================
+2026-02-08T14:36:23 | INFO     | storage          | Storage initialized at kalshi_bot.db
+2026-02-08T14:36:23 | INFO     | kalshi_client    | KalshiClient started (base_url=https://api.elections.kalshi.com/trade-api/v2)
+2026-02-08T14:36:23 | INFO     | price_feed       | PriceFeedAggregator started with 3 feeds: ['coinbase', 'binance', 'kraken']
+2026-02-08T14:36:23 | INFO     | main             | Account balance: 0¢ ($0.00) | Portfolio: 0¢ ($0.00)
+2026-02-08T14:36:23 | WARNING  | price_feed       | Insufficient price feeds: 0 active (need 1). Stale: ['coinbase', 'binance', 'kraken']
+2026-02-08T14:36:23 | WARNING  | main             | No BTC price available, waiting for feeds...
+2026-02-08T14:36:24 | INFO     | price_feed       | [coinbase] Subscribed to BTC-USD trades
+2026-02-08T14:36:24 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T14:36:25 | INFO     | price_feed       | [kraken] Subscribed to BTC/USD trades
+2026-02-08T14:36:26 | ERROR    | main             | Unexpected error in main loop: yes_price must be 1–99, got 0
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 234, in _process_market
+    managed = await self.execution.execute_decision(decision)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\execution.py", line 121, in execute_decision
+    order = await self._client.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 387, in create_order
+    raise ValueError(f"yes_price must be 1–99, got {yes_price}")
+ValueError: yes_price must be 1–99, got 0
+2026-02-08T14:36:29 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T14:36:32 | ERROR    | main             | Unexpected error in main loop: yes_price must be 1–99, got 0
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 234, in _process_market
+    managed = await self.execution.execute_decision(decision)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\execution.py", line 121, in execute_decision
+    order = await self._client.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 387, in create_order
+    raise ValueError(f"yes_price must be 1–99, got {yes_price}")
+ValueError: yes_price must be 1–99, got 0
+2026-02-08T14:36:35 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T14:36:38 | ERROR    | main             | Unexpected error in main loop: yes_price must be 1–99, got 0
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 234, in _process_market
+    managed = await self.execution.execute_decision(decision)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\execution.py", line 121, in execute_decision
+    order = await self._client.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 387, in create_order
+    raise ValueError(f"yes_price must be 1–99, got {yes_price}")
+ValueError: yes_price must be 1–99, got 0
+2026-02-08T14:36:40 | INFO     | main             | Bot shutdown requested
+2026-02-08T14:36:40 | INFO     | main             | Shutting down...
+2026-02-08T14:36:40 | INFO     | price_feed       | PriceFeedAggregator stopped
+2026-02-08T14:36:40 | INFO     | kalshi_client    | KalshiClient closed
+2026-02-08T14:36:40 | INFO     | main             | Shutdown complete
+2026-02-08T14:38:09 | INFO     | main             | ============================================================
+2026-02-08T14:38:09 | INFO     | main             |   Kalshi BTC 15-Min Trading Bot Starting
+2026-02-08T14:38:09 | INFO     | main             |   Mode: LIVE TRADING
+2026-02-08T14:38:09 | INFO     | main             |   Base URL: https://api.elections.kalshi.com/trade-api/v2
+2026-02-08T14:38:09 | INFO     | main             |   Series: KXBTC15M
+2026-02-08T14:38:09 | INFO     | main             | ============================================================
+2026-02-08T14:38:09 | INFO     | storage          | Storage initialized at kalshi_bot.db
+2026-02-08T14:38:09 | INFO     | kalshi_client    | KalshiClient started (base_url=https://api.elections.kalshi.com/trade-api/v2)
+2026-02-08T14:38:09 | INFO     | price_feed       | PriceFeedAggregator started with 3 feeds: ['coinbase', 'binance', 'kraken']
+2026-02-08T14:38:09 | INFO     | main             | Account balance: 0¢ ($0.00) | Portfolio: 0¢ ($0.00)
+2026-02-08T14:38:09 | WARNING  | price_feed       | Insufficient price feeds: 0 active (need 1). Stale: ['coinbase', 'binance', 'kraken']
+2026-02-08T14:38:09 | WARNING  | main             | No BTC price available, waiting for feeds...
+2026-02-08T14:38:09 | INFO     | price_feed       | [coinbase] Subscribed to BTC-USD trades
+2026-02-08T14:38:10 | ERROR    | price_feed       | [binance] Unexpected error: server rejected WebSocket connection: HTTP 451
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\price_feed.py", line 134, in run
+    async with websockets.connect(self._ws_url) as ws:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 590, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 546, in __await_impl__
+    await self.connection.handshake(
+    ...<2 lines>...
+    )
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\asyncio\client.py", line 115, in handshake
+    raise self.protocol.handshake_exc
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 327, in parse
+    self.process_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\venv\Lib\site-packages\websockets\client.py", line 144, in process_response
+    raise InvalidStatus(response)
+websockets.exceptions.InvalidStatus: server rejected WebSocket connection: HTTP 451
+2026-02-08T14:38:11 | INFO     | price_feed       | [kraken] Subscribed to BTC/USD trades
+2026-02-08T14:38:11 | ERROR    | main             | Unexpected error in main loop: yes_price must be 1–99, got 0
+Traceback (most recent call last):
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 129, in _run_loop
+    await self._process_market(market, btc_price)
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\main.py", line 234, in _process_market
+    managed = await self.execution.execute_decision(decision)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\execution.py", line 121, in execute_decision
+    order = await self._client.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\bhayu\OneDrive\Desktop\TradingBot\kalshi-btc-bot\kalshi_client.py", line 387, in create_order
+    raise ValueError(f"yes_price must be 1–99, got {yes_price}")
+ValueError: yes_price must be 1–99, got 0
+2026-02-08T14:38:14 | INFO     | main             | Bot shutdown requested
+2026-02-08T14:38:14 | INFO     | main             | Shutting down...
+2026-02-08T14:38:14 | INFO     | price_feed       | PriceFeedAggregator stopped
+2026-02-08T14:38:14 | INFO     | kalshi_client    | KalshiClient closed
+2026-02-08T14:38:14 | INFO     | main             | Shutdown complete
